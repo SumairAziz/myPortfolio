@@ -2,7 +2,6 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sumairaziz.github.io/myPortfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
