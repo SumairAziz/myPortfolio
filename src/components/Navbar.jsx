@@ -22,7 +22,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo} alt="logo" className='w-9 mr-2 h-9 scale-125 transition-all duration-150 object-contain' />
+          <img src={logo} alt="logo" className='w-8 mr-2 h-8 scale-125 transition-all duration-150 object-contain' />
           <p className='text-white flex text-[18px] font-bold cursor-pointer '>Sumair &nbsp;
             <span className='sm:block hidden'> | Web developer</span>
           </p>

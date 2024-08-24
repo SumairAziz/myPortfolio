@@ -56,11 +56,11 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-         {/* Environment provides realistic lighting */}
-         <Environment preset="city" />
+        {/* Environment provides realistic lighting */}
+        <Environment preset="city" />
 
-         {/* Key Light - Simulating the main light source */}
-         <directionalLight
+        {/* Key Light - Simulating the main light source */}
+        <directionalLight
           position={[5, 5, 5]}
           intensity={1}
           castShadow
@@ -76,13 +76,13 @@ const ComputersCanvas = () => {
         {/* Fill Light - Softens shadows and adds more light */}
         <directionalLight
           position={[-5, 5, -5]}
-          intensity={0.5}
+          intensity={0.9}
         />
 
         {/* Back Light - Adds depth */}
         <directionalLight
           position={[0, -5, 5]}
-          intensity={0.2}
+          intensity={0.9}
         />
 
         <Computers isMobile={isMobile} />
