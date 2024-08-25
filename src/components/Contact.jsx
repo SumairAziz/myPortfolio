@@ -27,43 +27,75 @@ const Contact = () => {
     });
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   //service_01zsk4z
+  //   //X3Bt8fGqCgFNEThzW    public key
+  //   emailjs
+  //     .send(
+  //       "service_01zsk4z",
+  //       "template_rkh0n0k",
+  //       {
+  //         from_name: form.name,
+  //         to_name: "JavaScript Mastery",
+  //         from_email: form.email,
+  //         to_email: "sujata@jsmastery.pro",
+  //         message: form.message,
+  //       },
+  //       "DJZlC2wQ9f2oh0Ra8"
+  //     )
+  //     .then(
+  //       () => {
+  //         setLoading(false);
+  //         alert("Thank you. I will get back to you as soon as possible.");
+
+  //         setForm({
+  //           name: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         setLoading(false);
+  //         console.error(error);
+
+  //         alert("Ahh, something went wrong. Please try again.");
+  //       }
+  //     );
+  // };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-//service_01zsk4z
-//X3Bt8fGqCgFNEThzW    public key
-    emailjs
-      .send(
-        "service_01zsk4z",
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        "X3Bt8fGqCgFNEThzW"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+  
+    emailjs.send(
+      "service_01zsk4z",   // Your service ID
+      "template_rkh0n0k",  // Your template ID
+      {
+        from_name: form.name,
+        to_name: "JavaScript Mastery",
+        from_email: form.email,
+        to_email: "sujata@jsmastery.pro",
+        message: form.message,
+      },
+      "DJZlC2wQ9f2oh0Ra8"  // Your public key
+    )
+    .then(
+      () => {
+        setLoading(false);
+        alert("Thank you. I will get back to you as soon as possible.");
+        setForm({ name: "", email: "", message: "" });
+      },
+      (error) => {
+        setLoading(false);
+        console.error(error);
+        alert("Ahh, something went wrong. Please try again.");
+      }
+    );
   };
+  
 
   return (
     <div
