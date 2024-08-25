@@ -88,11 +88,12 @@ const ComputersCanvas = () => {
         <Computers isMobile={isMobile} />
 
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          maxAzimuthAngle={Math.PI / 1.5}
-          minAzimuthAngle={Math.PI / 4}
+          // maxAzimuthAngle={Math.PI / 1.5}
+          // minAzimuthAngle={Math.PI / 4}
         />
       </Suspense>
 
