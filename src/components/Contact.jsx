@@ -91,7 +91,7 @@ const Contact = () => {
       (error) => {
         setLoading(false);
         console.error(error);
-        alert("Ahh, something went wrong. Please try again.");
+        alert("sorry, it requires a private or top domain");
       }
     );
   };
