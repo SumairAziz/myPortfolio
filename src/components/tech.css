@@ -1,0 +1,26 @@
+.relative {
+  position: relative;
+}
+
+.tooltip {
+  content: attr(data-text);
+  /* This will be the text shown */
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+}
+
+.group:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
